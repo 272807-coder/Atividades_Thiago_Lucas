@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './ex6.css',
 })
 export class Ex6 {
-  nomesIn = ['Diego', ' João', ' Fernando', ' Isabely', ' Elisa'];
+  nomesIn = ['Lucas', ' João', ' Gabriel', ' Kayo', ' Luiz'];
   nomes = [...this.nomesIn];
 
   removerUlt(): void {

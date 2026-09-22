@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './ex5.css',
 })
 export class Ex5 {
-  nomes = ['Diego', 'João', 'Fernando', 'Isabely', 'Elisa'];
+  nomes = ['Lucas', 'João', 'Gabriel', 'Kayo', 'Luiz'];
 }

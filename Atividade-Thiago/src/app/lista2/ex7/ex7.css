@@ -1,4 +1,4 @@
-.par {background-color: #2065a5;}
-.impar {background-color: #df882c;}
-.primera { font-weight: bold;}
+.par {background-color: #d0ff00;}
+.impar {background-color: #ffd900;}
+.primera { font-weight: impact; font-family: sans-serif;}
 .ultima {border: 2px solid red;}

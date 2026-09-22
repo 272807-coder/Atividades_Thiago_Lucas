@@ -1,1 +1,13 @@
-<p>ex6 works!</p>
+<p>Total de nomes: {{nomes.length}} </p>
+
+<ul>
+    @for (nome of nomes; track nome){
+        <li>{{nome}}</li>
+    } @empty {
+        <p>Nenhum nome cadastrado</p>
+    }
+</ul>
+
+<button (click)="removerUlt()"> Remover o Ultimo</button>
+<button (click)="limparList()"> Limpar a Lista</button>
+<button (click)="restaurar()"> Restaurar a Lista</button>

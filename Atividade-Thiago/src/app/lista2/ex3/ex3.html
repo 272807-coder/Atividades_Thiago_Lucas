@@ -1,1 +1,15 @@
-<p>ex3 works!</p>
+<p>idade = {{idade}}</p>
+
+@if (idade < 12) {
+    <p>Criança</p>
+} @else if (idade < 18) {
+    <p>Adolecente</p>
+} @else if (idade < 60) {
+    <p>Adulto</p>
+} @else {
+    <p>Idoso</p>
+}
+
+
+<button (click)="diminuir()" [disabled]="idade === 0" >[ - ]</button>
+<button (click)="aumentar()">[ + ]</button>

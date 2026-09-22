@@ -1,1 +1,11 @@
-<p>ex11 works!</p>
+<button (click)="filtraProduto()">
+    {{ somenteDisponiveis ? 'Mostrar todos' : 'Mostrar somente disponíveis' }}
+</button>
+
+<ul>
+    @for(produto of produtos; track produto){
+        <ng-container *ngIf="!somenteDisponiveis || produto.qtd > 0">
+            <li> {{produto.nome}} - {{produto.qtd}} un.</li>
+        </ng-container>
+    }
+</ul>

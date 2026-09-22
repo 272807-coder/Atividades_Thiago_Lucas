@@ -1,1 +1,18 @@
-<p>ex9 works!</p>
+@for (produto of produtos; track produto.id) {
+    <li [ngClass]="{
+        'vermelho': produto.qtd === 0,
+        'amarelo': produto.qtd > 0 && produto.qtd <=5,
+        'verde': produto.qtd > 5
+    }">
+    {{produto.nome}} -
+    @if(produto.qtd === 0){
+        Sem estoque.
+    } @else if(produto.qtd > 0 && produto.qtd <=5){
+        Estoque baixo.
+    } @else {
+        Estoque disponível.
+    }
+
+
+    </li>
+}

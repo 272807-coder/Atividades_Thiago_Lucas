@@ -1,1 +1,9 @@
-<p>ex8 works!</p>
+<ul>
+@for (produto of produtos; track produto.id; let i = $index){
+    <li>
+        {{i + 1}} - {{produto.nome}} |
+        Preço: {{produto.preco | currency: 'BRL'}} |
+        Quantidade: {{produto.qtd}} |
+        Total: {{ produto.preco * produto.qtd | currency: 'BRL'}}
+    </li>
+}</ul>

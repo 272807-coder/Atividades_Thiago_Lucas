@@ -1,1 +1,46 @@
-<p>desafio-final works!</p>
+<h2>Adote+ — Painel de Projetos</h2>
+
+<p>Total de projetos: {{ totalProjetos }}</p>
+<p>Projetos concluídos: {{ totalConcluidos }}</p>
+
+<button (click)="alternarExibicaoConcluidos()">
+  {{ mostrarConcluidos ? 'Ocultar concluídos' : 'Mostrar concluídos' }}
+</button>
+
+<ul>
+  @for (projeto of projetos; track projeto.id; let i = $index) {
+    @if (mostrarConcluidos || projeto.status !== 'concluido') {
+      <li [ngClass]="{
+        'status-planejamento': projeto.status === 'planejamento',
+        'status-desenvolvimento': projeto.status === 'desenvolvimento',
+        'status-testes': projeto.status === 'testes',
+        'status-concluido': projeto.status === 'concluido',
+        'nota-alta': projeto.nota !== null && projeto.nota >= 7,
+        'nota-baixa': projeto.nota !== null && projeto.nota < 6
+      }">
+        <strong>{{ i + 1 }}. {{ projeto.titulo }}</strong> —
+        Equipe: {{ projeto.equipe }} —
+        Status: {{ projeto.status }}
+
+        @if (projeto.entregue) {
+          <span> (Projeto entregue)</span>
+        }
+
+        @if (projeto.nota === null) {
+          <p>Nota ainda não definida</p>
+        } @else {
+          <p>Nota: {{ projeto.nota }}</p>
+        }
+
+        <select [ngModel]="projeto.status" (ngModelChange)="alterarStatus(projeto, $event)">
+          <option value="planejamento">Planejamento</option>
+          <option value="desenvolvimento">Desenvolvimento</option>
+          <option value="testes">Testes</option>
+          <option value="concluido">Concluído</option>
+        </select>
+      </li>
+    }
+  } @empty {
+    <p>Nenhum projeto cadastrado</p>
+  }
+</ul>

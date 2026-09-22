@@ -1,0 +1,4 @@
+.prioridade-baixa { border-left: 4px solid green; }
+.prioridade-media { border-left: 4px solid orange; }
+.prioridade-alta { border-left: 4px solid red; }
+.concluida { text-decoration: line-through; opacity: 0.6; }

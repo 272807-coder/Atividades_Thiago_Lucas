@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { Lista2RoutingModule } from './lista2-routing-module';
 import { Ex1 } from './ex1/ex1';
@@ -14,9 +15,28 @@ import { Ex9 } from './ex9/ex9';
 import { Ex10 } from './ex10/ex10';
 import { Ex11 } from './ex11/ex11';
 import { DesafioFinal } from './desafio-final/desafio-final';
+import { Ex12 } from './ex12/ex12';
+import { Ex13 } from './ex13/ex13';
+import { Ex14 } from './ex14/ex14';
 
 @NgModule({
-  declarations: [Ex1, Ex2, Ex3, Ex4, Ex5, Ex6, Ex7, Ex8, Ex9, Ex10, Ex11, DesafioFinal],
-  imports: [CommonModule, Lista2RoutingModule],
+  declarations: [
+    Ex1,
+    Ex2,
+    Ex3,
+    Ex4,
+    Ex5,
+    Ex6,
+    Ex7,
+    Ex8,
+    Ex9,
+    Ex10,
+    Ex11,
+    DesafioFinal,
+    Ex12,
+    Ex13,
+    Ex14,
+  ],
+  imports: [CommonModule, FormsModule, Lista2RoutingModule],
 })
 export class Lista2Module {}

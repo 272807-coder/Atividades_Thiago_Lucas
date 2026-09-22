@@ -1,0 +1,21 @@
+<h3>Ex1 - Exibição de mensagem</h3>
+<button (click)="alternarMensagem()">Mostrar ou ocultar mensagem</button>
+<p *ngIf="mensagemVisivel">Bem-vindo ao sistema.</p>
+
+<h3>Ex2 - Situação do usuário</h3>
+<button (click)="alternarLogin()">{{ usuarioLogado ? 'Sair' : 'Entrar' }}</button>
+<p *ngIf="usuarioLogado; else deslogado">Usuário autenticado</p>
+<ng-template #deslogado>
+  <p>Acesso não autorizado</p>
+</ng-template>
+
+<h3>Ex3 - Verificação de idade</h3>
+<p>Idade: {{ idade }}</p>
+
+<p *ngIf="idade < 12">Criança</p>
+<p *ngIf="idade >= 12 && idade < 18">Adolescente</p>
+<p *ngIf="idade >= 18 && idade < 60">Adulto</p>
+<p *ngIf="idade >= 60">Idoso</p>
+
+<button (click)="diminuirIdade()" [disabled]="idade === 0">[ - ]</button>
+<button (click)="aumentarIdade()">[ + ]</button>

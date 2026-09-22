@@ -1,1 +1,12 @@
-<p>ex7 works!</p>
+<ul>
+@for (disciplina of disciplinas; track disciplina; let i = $index, primeiro = $first, ultimo = $last, par = $even, impar = $odd){
+    <li [ngClass]="{
+        'par': par,
+        'impar': impar,
+        'primeira': primeiro,
+        'ultima': ultimo
+    }">
+        {{disciplina}}
+    </li>
+} 
+</ul>

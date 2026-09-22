@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './ex7.html',
   styleUrl: './ex7.css',
 })
-export class Ex7 {}
+export class Ex7 {
+  disciplinas = ['Matemática ', 'Quimíca ', 'Fisíca ','História ', 'Espanhol ', 'Inglês'];
+
+}

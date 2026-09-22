@@ -1,1 +1,21 @@
-<p>ex10 works!</p>
+<ul>
+    @for(produto of produtos; track produto.id){
+        <li>
+            <span [ngStyle] = "{
+                'font-weight' : produto.promo ? 'bold' : 'normal'
+            }">{{produto.nome}}</span> -
+            
+            <span [ngStyle] = "{
+                'color' : produto.promo ? 'green' : 'black'
+            }">{{produto.preco | currency: 'BRL'}}</span>
+
+            @if(produto.promo){
+                <strong> (Produto em promoção) </strong>
+            }
+
+            <button (click)="alternarPromo(produto)">
+                {{produto.promo ? 'Desativar' : 'Ativar'}}
+            </button>
+        </li>
+    }
+</ul>

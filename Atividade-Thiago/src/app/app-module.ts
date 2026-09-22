@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Lista1Module } from './lista1/lista1-module'; // Importa o módulo da lista1
 
+
 @NgModule({
   declarations: [
     App
